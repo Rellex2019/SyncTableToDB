@@ -15,6 +15,15 @@
                     @method('DELETE')
                     <button type="submit" class="btn btn-secondary ml-2">Очистить таблицу</button>
                 </form>
+                    <form action="{{ route('orders.set-sheet') }}" method="POST" class="form-inline">
+                        @csrf
+                        <div class="form-group mr-2">
+                            <input type="url" name="sheet_url" class="form-control" 
+                                   placeholder="Google Sheet URL" required
+                                   value="{{$url}}">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                    </form>
             </div>
 
             <form action="{{ route('orders.index') }}" method="GET" class="form-inline">

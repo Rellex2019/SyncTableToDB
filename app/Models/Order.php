@@ -27,4 +27,9 @@ class Order extends Model
     {
         Order::truncate();
     }
+
+    public function scopeAllowed($query)
+    {
+        return $query->where('status', 'Allowed');
+    }
 }
