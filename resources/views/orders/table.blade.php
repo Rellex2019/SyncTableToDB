@@ -68,7 +68,7 @@
         </table>
 
         <div class="d-flex justify-content-center">
-            {{ $orders->appends(request()->input())->links() }}
+            {{ $orders->appends(request()->input())->links('pagination::bootstrap-4') }}
         </div>
     </div>
 @endsection
